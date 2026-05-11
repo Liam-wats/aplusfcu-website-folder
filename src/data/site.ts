@@ -1,3 +1,10 @@
+import navAccounts from "@/assets/nav/accounts.webp";
+import navLoans from "@/assets/nav/loans.webp";
+import navServices from "@/assets/nav/services.webp";
+import navBusiness from "@/assets/nav/business.webp";
+import navWho from "@/assets/nav/who.webp";
+import navGuidance from "@/assets/nav/guidance.webp";
+
 export type NavLink = { label: string; href: string };
 export type NavColumn = { title: string; href: string; links: NavLink[] };
 export type NavFeatured = { image: string; title: string; body: string; href: string };
@@ -41,7 +48,7 @@ export const NAV: NavItem[] = [
       ],
     ],
     featured: {
-      image: "https://aplusfcu.org/wp-content/uploads/global/img/menu-feature_direct-deposit.webp",
+      image: navAccounts,
       title: "Don't Miss An Early Payday!",
       body: "Set up direct deposit with our FREE online tool to get paid up to 2 days early.*",
       href: "/services/member-services",
@@ -78,7 +85,7 @@ export const NAV: NavItem[] = [
       ],
     ],
     featured: {
-      image: "https://aplusfcu.org/wp-content/uploads/global/img/menu-feature_auto-refi.webp",
+      image: navLoans,
       title: "Refi Your Auto Loan To Save Big",
       body: "For a limited time, beat your current auto loan rate by 1% APR!*†",
       href: "/loans/vehicle-loans",
@@ -115,7 +122,7 @@ export const NAV: NavItem[] = [
       ],
     ],
     featured: {
-      image: "https://aplusfcu.org/wp-content/uploads/global/img/menu-feature_fraud.webp",
+      image: navServices,
       title: "Are You On Fraud Alert?",
       body: "Use our free resources to help protect your finances.",
       href: "/guidance/financial-education",
@@ -146,7 +153,7 @@ export const NAV: NavItem[] = [
       ],
     ],
     featured: {
-      image: "https://aplusfcu.org/wp-content/uploads/global/img/menu-feature_business-banking.webp",
+      image: navBusiness,
       title: "Online Banking For Businesses",
       body: "Log in to manage your business accounts 24/7.",
       href: "/business/services",
@@ -202,7 +209,7 @@ export const NAV: NavItem[] = [
       ],
     ],
     featured: {
-      image: "https://aplusfcu.org/wp-content/uploads/global/img/menu-feature_join.webp",
+      image: navWho,
       title: "Join A+FCU!",
       body: "Open your account online within 5 minutes.",
       href: "/join",
@@ -258,7 +265,7 @@ export const NAV: NavItem[] = [
       ],
     ],
     featured: {
-      image: "https://aplusfcu.org/wp-content/uploads/global/img/menu-feature_credit-score.webp",
+      image: navGuidance,
       title: "Help Detect Fraud",
       body: "Monitor your credit with FREE monthly credit score updates – enroll today!*",
       href: "/services/online-banking",

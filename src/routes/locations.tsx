@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Phone, Clock, ArrowRight } from "lucide-react";
-import { PageHero } from "@/components/site/PageHero";
+import { SplitHero } from "@/components/site/SplitHero";
 
 export const Route = createFileRoute("/locations")({
   head: () => ({
@@ -26,7 +26,7 @@ const BRANCHES = [
 function LocationsPage() {
   return (
     <>
-      <PageHero
+      <SplitHero
         eyebrow="Locations & ATMs"
         title="Banking Where You Are."
         body="Visit one of our 27 Central Texas branches or use 30,000+ surcharge-free CO-OP ATMs nationwide."

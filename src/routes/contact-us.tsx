@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
-import { PageHero } from "@/components/site/PageHero";
+import { SplitHero } from "@/components/site/SplitHero";
 
 export const Route = createFileRoute("/contact-us")({
   head: () => ({
@@ -24,7 +24,7 @@ const CHANNELS = [
 function ContactUsPage() {
   return (
     <>
-      <PageHero
+      <SplitHero
         eyebrow="Contact Us"
         title="We're Here To Help."
         body="Reach our member services team by phone, secure message, or visit one of our Central Texas branches."
