@@ -56,33 +56,32 @@ function MegaPanel({ item }: { item: NavItem }) {
           ))}
         </div>
 
-        <Link
-          to={item.featured.href}
-          className="group block bg-brand-green text-white overflow-hidden hover:bg-brand-green-dark transition-colors"
-        >
-          <div className="aspect-[16/10] overflow-hidden bg-muted">
-            <img
-              src={item.featured.image}
-              alt=""
-              className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
-              loading="lazy"
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-              }}
-            />
-          </div>
-          <div className="p-5">
-            <div className="flex items-start justify-between gap-3">
-              <h3 className="font-sans font-bold text-[17px] leading-snug text-white">
+        <div className="bg-brand-green p-4">
+          <Link
+            to={item.featured.href}
+            className="group block bg-white overflow-hidden hover:shadow-md transition-shadow"
+          >
+            <div className="aspect-[16/9] overflow-hidden bg-muted">
+              <img
+                src={item.featured.image}
+                alt=""
+                className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div className="p-4">
+              <h3 className="font-serif text-[19px] leading-snug text-ink">
                 {item.featured.title}
               </h3>
-              <ArrowRight className="w-5 h-5 mt-0.5 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+              <p className="mt-2 text-[13px] leading-relaxed text-ink/70">
+                {item.featured.body}
+              </p>
+              <span className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-bold text-brand-green uppercase tracking-wide">
+                Learn More <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </span>
             </div>
-            <p className="mt-2 text-[14px] italic leading-relaxed text-white/90">
-              {item.featured.body}
-            </p>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
     </div>
   );
