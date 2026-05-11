@@ -9,38 +9,415 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as JoinRouteImport } from './routes/join'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WhoWeAreIndexRouteImport } from './routes/who-we-are/index'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
+import { Route as LoansIndexRouteImport } from './routes/loans/index'
+import { Route as GuidanceIndexRouteImport } from './routes/guidance/index'
+import { Route as BusinessIndexRouteImport } from './routes/business/index'
+import { Route as AccountsIndexRouteImport } from './routes/accounts/index'
+import { Route as WhoWeAreMembershipRouteImport } from './routes/who-we-are/membership'
+import { Route as WhoWeAreCommunityRouteImport } from './routes/who-we-are/community'
+import { Route as WhoWeAreAboutRouteImport } from './routes/who-we-are/about'
+import { Route as ServicesOnlineBankingRouteImport } from './routes/services/online-banking'
+import { Route as ServicesMobileBankingRouteImport } from './routes/services/mobile-banking'
+import { Route as ServicesMemberServicesRouteImport } from './routes/services/member-services'
+import { Route as ServicesInsuranceInvestmentsRouteImport } from './routes/services/insurance-investments'
+import { Route as LoansVehicleLoansRouteImport } from './routes/loans/vehicle-loans'
+import { Route as LoansStudentLoansRouteImport } from './routes/loans/student-loans'
+import { Route as LoansPersonalCreditRouteImport } from './routes/loans/personal-credit'
+import { Route as LoansHomeLoansRouteImport } from './routes/loans/home-loans'
+import { Route as GuidanceToolsRouteImport } from './routes/guidance/tools'
+import { Route as GuidanceRatesRouteImport } from './routes/guidance/rates'
+import { Route as GuidanceFinancialEducationRouteImport } from './routes/guidance/financial-education'
+import { Route as BusinessServicesRouteImport } from './routes/business/services'
+import { Route as BusinessLendingRouteImport } from './routes/business/lending'
+import { Route as BusinessAccountsRouteImport } from './routes/business/accounts'
+import { Route as AccountsYouthRouteImport } from './routes/accounts/youth'
+import { Route as AccountsSavingsRouteImport } from './routes/accounts/savings'
+import { Route as AccountsCheckingRouteImport } from './routes/accounts/checking'
+import { Route as AccountsCertificatesRouteImport } from './routes/accounts/certificates'
 
+const JoinRoute = JoinRouteImport.update({
+  id: '/join',
+  path: '/join',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WhoWeAreIndexRoute = WhoWeAreIndexRouteImport.update({
+  id: '/who-we-are/',
+  path: '/who-we-are/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoansIndexRoute = LoansIndexRouteImport.update({
+  id: '/loans/',
+  path: '/loans/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuidanceIndexRoute = GuidanceIndexRouteImport.update({
+  id: '/guidance/',
+  path: '/guidance/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessIndexRoute = BusinessIndexRouteImport.update({
+  id: '/business/',
+  path: '/business/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountsIndexRoute = AccountsIndexRouteImport.update({
+  id: '/accounts/',
+  path: '/accounts/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhoWeAreMembershipRoute = WhoWeAreMembershipRouteImport.update({
+  id: '/who-we-are/membership',
+  path: '/who-we-are/membership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhoWeAreCommunityRoute = WhoWeAreCommunityRouteImport.update({
+  id: '/who-we-are/community',
+  path: '/who-we-are/community',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhoWeAreAboutRoute = WhoWeAreAboutRouteImport.update({
+  id: '/who-we-are/about',
+  path: '/who-we-are/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesOnlineBankingRoute = ServicesOnlineBankingRouteImport.update({
+  id: '/services/online-banking',
+  path: '/services/online-banking',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesMobileBankingRoute = ServicesMobileBankingRouteImport.update({
+  id: '/services/mobile-banking',
+  path: '/services/mobile-banking',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesMemberServicesRoute = ServicesMemberServicesRouteImport.update({
+  id: '/services/member-services',
+  path: '/services/member-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesInsuranceInvestmentsRoute =
+  ServicesInsuranceInvestmentsRouteImport.update({
+    id: '/services/insurance-investments',
+    path: '/services/insurance-investments',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LoansVehicleLoansRoute = LoansVehicleLoansRouteImport.update({
+  id: '/loans/vehicle-loans',
+  path: '/loans/vehicle-loans',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoansStudentLoansRoute = LoansStudentLoansRouteImport.update({
+  id: '/loans/student-loans',
+  path: '/loans/student-loans',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoansPersonalCreditRoute = LoansPersonalCreditRouteImport.update({
+  id: '/loans/personal-credit',
+  path: '/loans/personal-credit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoansHomeLoansRoute = LoansHomeLoansRouteImport.update({
+  id: '/loans/home-loans',
+  path: '/loans/home-loans',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuidanceToolsRoute = GuidanceToolsRouteImport.update({
+  id: '/guidance/tools',
+  path: '/guidance/tools',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuidanceRatesRoute = GuidanceRatesRouteImport.update({
+  id: '/guidance/rates',
+  path: '/guidance/rates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuidanceFinancialEducationRoute =
+  GuidanceFinancialEducationRouteImport.update({
+    id: '/guidance/financial-education',
+    path: '/guidance/financial-education',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BusinessServicesRoute = BusinessServicesRouteImport.update({
+  id: '/business/services',
+  path: '/business/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessLendingRoute = BusinessLendingRouteImport.update({
+  id: '/business/lending',
+  path: '/business/lending',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessAccountsRoute = BusinessAccountsRouteImport.update({
+  id: '/business/accounts',
+  path: '/business/accounts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountsYouthRoute = AccountsYouthRouteImport.update({
+  id: '/accounts/youth',
+  path: '/accounts/youth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountsSavingsRoute = AccountsSavingsRouteImport.update({
+  id: '/accounts/savings',
+  path: '/accounts/savings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountsCheckingRoute = AccountsCheckingRouteImport.update({
+  id: '/accounts/checking',
+  path: '/accounts/checking',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountsCertificatesRoute = AccountsCertificatesRouteImport.update({
+  id: '/accounts/certificates',
+  path: '/accounts/certificates',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/join': typeof JoinRoute
+  '/accounts/certificates': typeof AccountsCertificatesRoute
+  '/accounts/checking': typeof AccountsCheckingRoute
+  '/accounts/savings': typeof AccountsSavingsRoute
+  '/accounts/youth': typeof AccountsYouthRoute
+  '/business/accounts': typeof BusinessAccountsRoute
+  '/business/lending': typeof BusinessLendingRoute
+  '/business/services': typeof BusinessServicesRoute
+  '/guidance/financial-education': typeof GuidanceFinancialEducationRoute
+  '/guidance/rates': typeof GuidanceRatesRoute
+  '/guidance/tools': typeof GuidanceToolsRoute
+  '/loans/home-loans': typeof LoansHomeLoansRoute
+  '/loans/personal-credit': typeof LoansPersonalCreditRoute
+  '/loans/student-loans': typeof LoansStudentLoansRoute
+  '/loans/vehicle-loans': typeof LoansVehicleLoansRoute
+  '/services/insurance-investments': typeof ServicesInsuranceInvestmentsRoute
+  '/services/member-services': typeof ServicesMemberServicesRoute
+  '/services/mobile-banking': typeof ServicesMobileBankingRoute
+  '/services/online-banking': typeof ServicesOnlineBankingRoute
+  '/who-we-are/about': typeof WhoWeAreAboutRoute
+  '/who-we-are/community': typeof WhoWeAreCommunityRoute
+  '/who-we-are/membership': typeof WhoWeAreMembershipRoute
+  '/accounts/': typeof AccountsIndexRoute
+  '/business/': typeof BusinessIndexRoute
+  '/guidance/': typeof GuidanceIndexRoute
+  '/loans/': typeof LoansIndexRoute
+  '/services/': typeof ServicesIndexRoute
+  '/who-we-are/': typeof WhoWeAreIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/join': typeof JoinRoute
+  '/accounts/certificates': typeof AccountsCertificatesRoute
+  '/accounts/checking': typeof AccountsCheckingRoute
+  '/accounts/savings': typeof AccountsSavingsRoute
+  '/accounts/youth': typeof AccountsYouthRoute
+  '/business/accounts': typeof BusinessAccountsRoute
+  '/business/lending': typeof BusinessLendingRoute
+  '/business/services': typeof BusinessServicesRoute
+  '/guidance/financial-education': typeof GuidanceFinancialEducationRoute
+  '/guidance/rates': typeof GuidanceRatesRoute
+  '/guidance/tools': typeof GuidanceToolsRoute
+  '/loans/home-loans': typeof LoansHomeLoansRoute
+  '/loans/personal-credit': typeof LoansPersonalCreditRoute
+  '/loans/student-loans': typeof LoansStudentLoansRoute
+  '/loans/vehicle-loans': typeof LoansVehicleLoansRoute
+  '/services/insurance-investments': typeof ServicesInsuranceInvestmentsRoute
+  '/services/member-services': typeof ServicesMemberServicesRoute
+  '/services/mobile-banking': typeof ServicesMobileBankingRoute
+  '/services/online-banking': typeof ServicesOnlineBankingRoute
+  '/who-we-are/about': typeof WhoWeAreAboutRoute
+  '/who-we-are/community': typeof WhoWeAreCommunityRoute
+  '/who-we-are/membership': typeof WhoWeAreMembershipRoute
+  '/accounts': typeof AccountsIndexRoute
+  '/business': typeof BusinessIndexRoute
+  '/guidance': typeof GuidanceIndexRoute
+  '/loans': typeof LoansIndexRoute
+  '/services': typeof ServicesIndexRoute
+  '/who-we-are': typeof WhoWeAreIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/join': typeof JoinRoute
+  '/accounts/certificates': typeof AccountsCertificatesRoute
+  '/accounts/checking': typeof AccountsCheckingRoute
+  '/accounts/savings': typeof AccountsSavingsRoute
+  '/accounts/youth': typeof AccountsYouthRoute
+  '/business/accounts': typeof BusinessAccountsRoute
+  '/business/lending': typeof BusinessLendingRoute
+  '/business/services': typeof BusinessServicesRoute
+  '/guidance/financial-education': typeof GuidanceFinancialEducationRoute
+  '/guidance/rates': typeof GuidanceRatesRoute
+  '/guidance/tools': typeof GuidanceToolsRoute
+  '/loans/home-loans': typeof LoansHomeLoansRoute
+  '/loans/personal-credit': typeof LoansPersonalCreditRoute
+  '/loans/student-loans': typeof LoansStudentLoansRoute
+  '/loans/vehicle-loans': typeof LoansVehicleLoansRoute
+  '/services/insurance-investments': typeof ServicesInsuranceInvestmentsRoute
+  '/services/member-services': typeof ServicesMemberServicesRoute
+  '/services/mobile-banking': typeof ServicesMobileBankingRoute
+  '/services/online-banking': typeof ServicesOnlineBankingRoute
+  '/who-we-are/about': typeof WhoWeAreAboutRoute
+  '/who-we-are/community': typeof WhoWeAreCommunityRoute
+  '/who-we-are/membership': typeof WhoWeAreMembershipRoute
+  '/accounts/': typeof AccountsIndexRoute
+  '/business/': typeof BusinessIndexRoute
+  '/guidance/': typeof GuidanceIndexRoute
+  '/loans/': typeof LoansIndexRoute
+  '/services/': typeof ServicesIndexRoute
+  '/who-we-are/': typeof WhoWeAreIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/join'
+    | '/accounts/certificates'
+    | '/accounts/checking'
+    | '/accounts/savings'
+    | '/accounts/youth'
+    | '/business/accounts'
+    | '/business/lending'
+    | '/business/services'
+    | '/guidance/financial-education'
+    | '/guidance/rates'
+    | '/guidance/tools'
+    | '/loans/home-loans'
+    | '/loans/personal-credit'
+    | '/loans/student-loans'
+    | '/loans/vehicle-loans'
+    | '/services/insurance-investments'
+    | '/services/member-services'
+    | '/services/mobile-banking'
+    | '/services/online-banking'
+    | '/who-we-are/about'
+    | '/who-we-are/community'
+    | '/who-we-are/membership'
+    | '/accounts/'
+    | '/business/'
+    | '/guidance/'
+    | '/loans/'
+    | '/services/'
+    | '/who-we-are/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/join'
+    | '/accounts/certificates'
+    | '/accounts/checking'
+    | '/accounts/savings'
+    | '/accounts/youth'
+    | '/business/accounts'
+    | '/business/lending'
+    | '/business/services'
+    | '/guidance/financial-education'
+    | '/guidance/rates'
+    | '/guidance/tools'
+    | '/loans/home-loans'
+    | '/loans/personal-credit'
+    | '/loans/student-loans'
+    | '/loans/vehicle-loans'
+    | '/services/insurance-investments'
+    | '/services/member-services'
+    | '/services/mobile-banking'
+    | '/services/online-banking'
+    | '/who-we-are/about'
+    | '/who-we-are/community'
+    | '/who-we-are/membership'
+    | '/accounts'
+    | '/business'
+    | '/guidance'
+    | '/loans'
+    | '/services'
+    | '/who-we-are'
+  id:
+    | '__root__'
+    | '/'
+    | '/join'
+    | '/accounts/certificates'
+    | '/accounts/checking'
+    | '/accounts/savings'
+    | '/accounts/youth'
+    | '/business/accounts'
+    | '/business/lending'
+    | '/business/services'
+    | '/guidance/financial-education'
+    | '/guidance/rates'
+    | '/guidance/tools'
+    | '/loans/home-loans'
+    | '/loans/personal-credit'
+    | '/loans/student-loans'
+    | '/loans/vehicle-loans'
+    | '/services/insurance-investments'
+    | '/services/member-services'
+    | '/services/mobile-banking'
+    | '/services/online-banking'
+    | '/who-we-are/about'
+    | '/who-we-are/community'
+    | '/who-we-are/membership'
+    | '/accounts/'
+    | '/business/'
+    | '/guidance/'
+    | '/loans/'
+    | '/services/'
+    | '/who-we-are/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  JoinRoute: typeof JoinRoute
+  AccountsCertificatesRoute: typeof AccountsCertificatesRoute
+  AccountsCheckingRoute: typeof AccountsCheckingRoute
+  AccountsSavingsRoute: typeof AccountsSavingsRoute
+  AccountsYouthRoute: typeof AccountsYouthRoute
+  BusinessAccountsRoute: typeof BusinessAccountsRoute
+  BusinessLendingRoute: typeof BusinessLendingRoute
+  BusinessServicesRoute: typeof BusinessServicesRoute
+  GuidanceFinancialEducationRoute: typeof GuidanceFinancialEducationRoute
+  GuidanceRatesRoute: typeof GuidanceRatesRoute
+  GuidanceToolsRoute: typeof GuidanceToolsRoute
+  LoansHomeLoansRoute: typeof LoansHomeLoansRoute
+  LoansPersonalCreditRoute: typeof LoansPersonalCreditRoute
+  LoansStudentLoansRoute: typeof LoansStudentLoansRoute
+  LoansVehicleLoansRoute: typeof LoansVehicleLoansRoute
+  ServicesInsuranceInvestmentsRoute: typeof ServicesInsuranceInvestmentsRoute
+  ServicesMemberServicesRoute: typeof ServicesMemberServicesRoute
+  ServicesMobileBankingRoute: typeof ServicesMobileBankingRoute
+  ServicesOnlineBankingRoute: typeof ServicesOnlineBankingRoute
+  WhoWeAreAboutRoute: typeof WhoWeAreAboutRoute
+  WhoWeAreCommunityRoute: typeof WhoWeAreCommunityRoute
+  WhoWeAreMembershipRoute: typeof WhoWeAreMembershipRoute
+  AccountsIndexRoute: typeof AccountsIndexRoute
+  BusinessIndexRoute: typeof BusinessIndexRoute
+  GuidanceIndexRoute: typeof GuidanceIndexRoute
+  LoansIndexRoute: typeof LoansIndexRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
+  WhoWeAreIndexRoute: typeof WhoWeAreIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/join': {
+      id: '/join'
+      path: '/join'
+      fullPath: '/join'
+      preLoaderRoute: typeof JoinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +425,228 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/who-we-are/': {
+      id: '/who-we-are/'
+      path: '/who-we-are'
+      fullPath: '/who-we-are/'
+      preLoaderRoute: typeof WhoWeAreIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loans/': {
+      id: '/loans/'
+      path: '/loans'
+      fullPath: '/loans/'
+      preLoaderRoute: typeof LoansIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guidance/': {
+      id: '/guidance/'
+      path: '/guidance'
+      fullPath: '/guidance/'
+      preLoaderRoute: typeof GuidanceIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business/': {
+      id: '/business/'
+      path: '/business'
+      fullPath: '/business/'
+      preLoaderRoute: typeof BusinessIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accounts/': {
+      id: '/accounts/'
+      path: '/accounts'
+      fullPath: '/accounts/'
+      preLoaderRoute: typeof AccountsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/who-we-are/membership': {
+      id: '/who-we-are/membership'
+      path: '/who-we-are/membership'
+      fullPath: '/who-we-are/membership'
+      preLoaderRoute: typeof WhoWeAreMembershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/who-we-are/community': {
+      id: '/who-we-are/community'
+      path: '/who-we-are/community'
+      fullPath: '/who-we-are/community'
+      preLoaderRoute: typeof WhoWeAreCommunityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/who-we-are/about': {
+      id: '/who-we-are/about'
+      path: '/who-we-are/about'
+      fullPath: '/who-we-are/about'
+      preLoaderRoute: typeof WhoWeAreAboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/online-banking': {
+      id: '/services/online-banking'
+      path: '/services/online-banking'
+      fullPath: '/services/online-banking'
+      preLoaderRoute: typeof ServicesOnlineBankingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/mobile-banking': {
+      id: '/services/mobile-banking'
+      path: '/services/mobile-banking'
+      fullPath: '/services/mobile-banking'
+      preLoaderRoute: typeof ServicesMobileBankingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/member-services': {
+      id: '/services/member-services'
+      path: '/services/member-services'
+      fullPath: '/services/member-services'
+      preLoaderRoute: typeof ServicesMemberServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/insurance-investments': {
+      id: '/services/insurance-investments'
+      path: '/services/insurance-investments'
+      fullPath: '/services/insurance-investments'
+      preLoaderRoute: typeof ServicesInsuranceInvestmentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loans/vehicle-loans': {
+      id: '/loans/vehicle-loans'
+      path: '/loans/vehicle-loans'
+      fullPath: '/loans/vehicle-loans'
+      preLoaderRoute: typeof LoansVehicleLoansRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loans/student-loans': {
+      id: '/loans/student-loans'
+      path: '/loans/student-loans'
+      fullPath: '/loans/student-loans'
+      preLoaderRoute: typeof LoansStudentLoansRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loans/personal-credit': {
+      id: '/loans/personal-credit'
+      path: '/loans/personal-credit'
+      fullPath: '/loans/personal-credit'
+      preLoaderRoute: typeof LoansPersonalCreditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loans/home-loans': {
+      id: '/loans/home-loans'
+      path: '/loans/home-loans'
+      fullPath: '/loans/home-loans'
+      preLoaderRoute: typeof LoansHomeLoansRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guidance/tools': {
+      id: '/guidance/tools'
+      path: '/guidance/tools'
+      fullPath: '/guidance/tools'
+      preLoaderRoute: typeof GuidanceToolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guidance/rates': {
+      id: '/guidance/rates'
+      path: '/guidance/rates'
+      fullPath: '/guidance/rates'
+      preLoaderRoute: typeof GuidanceRatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guidance/financial-education': {
+      id: '/guidance/financial-education'
+      path: '/guidance/financial-education'
+      fullPath: '/guidance/financial-education'
+      preLoaderRoute: typeof GuidanceFinancialEducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business/services': {
+      id: '/business/services'
+      path: '/business/services'
+      fullPath: '/business/services'
+      preLoaderRoute: typeof BusinessServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business/lending': {
+      id: '/business/lending'
+      path: '/business/lending'
+      fullPath: '/business/lending'
+      preLoaderRoute: typeof BusinessLendingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business/accounts': {
+      id: '/business/accounts'
+      path: '/business/accounts'
+      fullPath: '/business/accounts'
+      preLoaderRoute: typeof BusinessAccountsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accounts/youth': {
+      id: '/accounts/youth'
+      path: '/accounts/youth'
+      fullPath: '/accounts/youth'
+      preLoaderRoute: typeof AccountsYouthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accounts/savings': {
+      id: '/accounts/savings'
+      path: '/accounts/savings'
+      fullPath: '/accounts/savings'
+      preLoaderRoute: typeof AccountsSavingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accounts/checking': {
+      id: '/accounts/checking'
+      path: '/accounts/checking'
+      fullPath: '/accounts/checking'
+      preLoaderRoute: typeof AccountsCheckingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accounts/certificates': {
+      id: '/accounts/certificates'
+      path: '/accounts/certificates'
+      fullPath: '/accounts/certificates'
+      preLoaderRoute: typeof AccountsCertificatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  JoinRoute: JoinRoute,
+  AccountsCertificatesRoute: AccountsCertificatesRoute,
+  AccountsCheckingRoute: AccountsCheckingRoute,
+  AccountsSavingsRoute: AccountsSavingsRoute,
+  AccountsYouthRoute: AccountsYouthRoute,
+  BusinessAccountsRoute: BusinessAccountsRoute,
+  BusinessLendingRoute: BusinessLendingRoute,
+  BusinessServicesRoute: BusinessServicesRoute,
+  GuidanceFinancialEducationRoute: GuidanceFinancialEducationRoute,
+  GuidanceRatesRoute: GuidanceRatesRoute,
+  GuidanceToolsRoute: GuidanceToolsRoute,
+  LoansHomeLoansRoute: LoansHomeLoansRoute,
+  LoansPersonalCreditRoute: LoansPersonalCreditRoute,
+  LoansStudentLoansRoute: LoansStudentLoansRoute,
+  LoansVehicleLoansRoute: LoansVehicleLoansRoute,
+  ServicesInsuranceInvestmentsRoute: ServicesInsuranceInvestmentsRoute,
+  ServicesMemberServicesRoute: ServicesMemberServicesRoute,
+  ServicesMobileBankingRoute: ServicesMobileBankingRoute,
+  ServicesOnlineBankingRoute: ServicesOnlineBankingRoute,
+  WhoWeAreAboutRoute: WhoWeAreAboutRoute,
+  WhoWeAreCommunityRoute: WhoWeAreCommunityRoute,
+  WhoWeAreMembershipRoute: WhoWeAreMembershipRoute,
+  AccountsIndexRoute: AccountsIndexRoute,
+  BusinessIndexRoute: BusinessIndexRoute,
+  GuidanceIndexRoute: GuidanceIndexRoute,
+  LoansIndexRoute: LoansIndexRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
+  WhoWeAreIndexRoute: WhoWeAreIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
