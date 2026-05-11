@@ -1,3 +1,10 @@
+import navAccounts from "@/assets/nav/accounts.webp";
+import navLoans from "@/assets/nav/loans.webp";
+import navServices from "@/assets/nav/services.webp";
+import navBusiness from "@/assets/nav/business.webp";
+import navWho from "@/assets/nav/who.webp";
+import navGuidance from "@/assets/nav/guidance.webp";
+
 export type NavLink = { label: string; href: string };
 export type NavColumn = { title: string; href: string; links: NavLink[] };
 export type NavFeatured = { image: string; title: string; body: string; href: string };
